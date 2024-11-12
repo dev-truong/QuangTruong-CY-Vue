@@ -1,25 +1,30 @@
 <script setup>
 import ListComponent from '@/views/ThucHanhBuoi4/ListComponent.vue'
-// import Bai2 from '@/views/BaiTapVue/Bai2/Bai2.vue'
-import Bai3 from '@/views/BaiTapVue/Bai3/Bai3.vue'
-import Bai4 from '@/views/BaiTapVue/Bai4/Bai4.vue'
-import Test from '@/views/BaiTapVue/Bai4/test.vue'
-import CountDown from '@/views/BaiTapVue/Bai5/CountDown.vue'
-import MoneyConvert from '@/views/BaiTapVue/Bai6/MoneyConvert.vue'
-import Index from '@/views/Day5/index.vue'
+import TestAxios from '@/views/TestAxios.vue'
+import { routes } from '@/router/index.js'
+import PiniaA from '@/views/TestPinia/PiniaA.vue'
+import PiniaB from '@/views/TestPinia/PiniaB.vue'
 </script>
 <template>
-<!--  <RouterLink v-for="item in routes" :to="item.path" :key="item.name">{{item.title}}</RouterLink>-->
-<!--  <RouterView/>-->
 
-<!--  <ListComponent/>-->
-<!--<Bai2/>-->
-<!--<Bai3/>-->
-<!--  <Bai4/>-->
-<!--  <test/>-->
-<!--  <CountDown/>-->
-<!--  <MoneyConvert/>-->
-<!--<index/>-->
+  <!--  <ListComponent/>-->
+  <!--  <TestAxios/>-->
+<!--  <PiniaA/>-->
+<!--  <PiniaB/>-->
+
+  <div class="fixed top-0 right-0 left-0 flex items-center justify-center gap-8 py-2 bg-blue-400">
+    <RouterLink
+      v-for="item in routes"
+      :to="item.path"
+      :key="item.name"
+    >
+      {{ item.title }}
+    </RouterLink>
+
+  </div>
+  <div class="pt-10">
+    <RouterView />
+  </div>
 </template>
 <style scoped>
 
